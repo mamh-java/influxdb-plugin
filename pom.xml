@@ -47,30 +47,32 @@ THE SOFTWARE.
     </scm>
 
     <properties>
-        <access-modifier-annotation.version>1.21</access-modifier-annotation.version>
-        <annotation-indexer.version>1.14</annotation-indexer.version>
-        <asm.version>9.1</asm.version>
-        <bridge-method-annotation.version>1.18</bridge-method-annotation.version>
+        <access-modifier-annotation.version>1.27</access-modifier-annotation.version>
+        <annotation-indexer.version>1.16</annotation-indexer.version>
+        <asm.version>9.3</asm.version>
+        <bridge-method-annotation.version>1.23</bridge-method-annotation.version>
         <byte-buddy.version>1.9.10</byte-buddy.version>
-        <caffeine.version>2.9.2</caffeine.version>
+        <caffeine.version>2.9.3</caffeine.version>
+        <caffeine-api.version>2.9.3-65.v6a_47d0f4d1fe</caffeine-api.version>
         <cobertura.version>1.16</cobertura.version>
         <commons-csv.version>1.8</commons-csv.version>
-        <commons-lang3.version>3.11</commons-lang3.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
         <configuration-as-code.version>1.55.1</configuration-as-code.version>
-        <credentials.version>2.6.1.1</credentials.version>
-        <display-url-api.version>2.3.5</display-url-api.version>
+        <credentials.version>1139.veb_9579fca_33b_</credentials.version>
+        <display-url-api.version>2.3.6</display-url-api.version>
         <doxia-sink-api.version>1.1.2</doxia-sink-api.version>
         <git-plugin.version>4.11.5</git-plugin.version>
-        <gson.version>2.8.9</gson.version>
+        <gson.version>2.9.1</gson.version>
         <hpi.compatibleSinceVersion>3.0</hpi.compatibleSinceVersion>
         <influxdb-client-java.version>4.1.0</influxdb-client-java.version>
-        <jacoco.version>1.0.12</jacoco.version>
-        <java.level>8</java.level>
-        <jenkins.version>2.289.1</jenkins.version>
+        <jacoco.version>3.3.2.1</jacoco.version>
+        <java.level>11</java.level>
+        <jenkins.version>2.361.4</jenkins.version>
         <jimfs.version>1.0</jimfs.version>
         <junit.version>4.13.1</junit.version>
-        <junit_plugin.version>1.47</junit_plugin.version>
+        <junit_plugin.version>1166.va_436e268e972</junit_plugin.version>
         <kotlin-stdlib.version>1.6.0</kotlin-stdlib.version>
+<!--        <mailer.version>448.v5b_97805e3767</mailer.version>-->
         <mailer.version>408.vd726a_1130320</mailer.version>
         <maven-reporting-api.version>3.0</maven-reporting-api.version>
         <matrix-project.version>1.20</matrix-project.version>
@@ -78,21 +80,21 @@ THE SOFTWARE.
         <mockito-core.version>2.26.0</mockito-core.version>
         <performance.version>3.0</performance.version>
         <perfpublisher.version>8.05</perfpublisher.version>
-        <plexus-utils.version>3.0.16</plexus-utils.version>
+        <plexus-utils.version>3.2.1</plexus-utils.version>
         <plexus-container-default.version>1.0-alpha-30</plexus-container-default.version>
-        <plain-credentials.version>1.7</plain-credentials.version>
+        <plain-credentials.version>1.8</plain-credentials.version>
         <robot.version>3.0.0</robot.version>
-        <scm-api.version>595.vd5a_df5eb_0e39</scm-api.version>
-        <script-security.version>1131.v8b_b_5eda_c328e</script-security.version>
-        <slf4j.version>1.7.30</slf4j.version>
-        <spotbugs-annotations.version>4.2.0</spotbugs-annotations.version>
+        <scm-api.version>621.vda_a_b_055e58f7</scm-api.version>
+        <script-security.version>1229.v4880b_b_e905a_6</script-security.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <spotbugs-annotations.version>4.7.1</spotbugs-annotations.version>
         <spotbugs.failOnError>false</spotbugs.failOnError>
-        <sshd.version>3.0</sshd.version>
-        <structs.version>308.v852b473a2b8c</structs.version>
-        <symbol-annotation.version>1.10</symbol-annotation.version>
-        <workflow-api.version>2.40</workflow-api.version>
-        <workflow-step-api.version>622.vb_8e7c15b_c95a_</workflow-step-api.version>
-        <workflow-durable-task-step.version>2.35</workflow-durable-task-step.version>
+        <sshd.version>3.242.va_db_9da_b_26a_c3</sshd.version>
+        <structs.version>324.va_f5d6774f3a_d</structs.version>
+        <symbol-annotation.version>1.23</symbol-annotation.version>
+        <workflow-api.version>1200.v8005c684b_a_c6</workflow-api.version>
+        <workflow-step-api.version>639.v6eca_cd8c04a_a_</workflow-step-api.version>
+        <workflow-durable-task-step.version>1227.vdc0a_d1fd4338</workflow-durable-task-step.version>
     </properties>
 
     <licenses>
@@ -120,8 +122,16 @@ THE SOFTWARE.
         </pluginRepository>
     </pluginRepositories>
 
+
     <dependencyManagement>
         <dependencies>
+<!--            <dependency>-->
+<!--                <groupId>io.jenkins.tools.bom</groupId>-->
+<!--                <artifactId>bom-2.361.x</artifactId>-->
+<!--                <version>2102.v854b_fec19c92</version>-->
+<!--                <scope>import</scope>-->
+<!--                <type>pom</type>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
@@ -314,6 +324,11 @@ THE SOFTWARE.
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>caffeine</artifactId>
             <version>${caffeine.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jenkins.plugins</groupId>
+            <artifactId>caffeine-api</artifactId>
+            <version>${caffeine-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
